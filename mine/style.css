@@ -1,0 +1,341 @@
+*{
+    font-family: Trebuchet MS;
+}
+
+body, ul, li {
+    margin: 0;
+    padding: 0; 
+}
+
+p, li, h1, h2, h3, h4 {
+    color: #4e4e4e;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+/* used to confine sections to the required width*/
+.wrapper {
+    width: 96%;
+    max-width: 1200px; /* 96% for smaller sizes, but a max of 1200*/
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+header {
+    background: #e7e7e7;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    text-indent: -10000px; /* Moves the header text offscreen, for screenreaders*/
+    background: url(images/logo.png) no-repeat; /* the background image becomes the actual logo*/
+    width: 130px;
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+/* clearfix, adds an empty block element after, prevents collapsing of divs where elements inside are all floated */
+header:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+header nav h2 {
+    line-height: 0;
+    margin: 0;
+    text-indent: -10000px;
+}
+
+header nav li {
+ list-style-type: none;
+ float: left;
+ margin-left: 20px;
+ margin-top: 10px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #4e4e4e;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header nav li a.current { /* current is a class added to a link */
+    color: #1abb9c;
+}
+
+#main-banner img{
+    width: 100%;
+}
+
+#main-banner {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+#selling-points{
+    margin-top: 60px;
+}
+
+#selling-points li{
+    width: 23%;
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    padding: 1%;
+    line-height: 1.6em;
+}
+
+#selling-points:after{
+    clear: both;
+    display: block;
+    content: "";
+}
+
+#latest-work{
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 2px solid #e4e4e4;
+}
+
+#latest-work h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#latest-work li{
+    width: 32%;
+    float: left;
+    list-style-type: none;
+}
+
+#latest-work li img{
+    width: 100%;
+}
+
+#latest-work li:nth-child(2){  /* styles the 2nd element, ie the middle one */
+    margin: 0 2%;
+}
+
+#latest-work ul:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#latest-work h3{
+    margin-bottom: 0px;
+}
+
+#latest-work p{
+    line-height: 1.6em;
+}
+
+p.tags{
+    color: #bbb;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#quote{
+    margin-top: 60px;
+    width: 60%;
+    padding: 40px 20%;
+    background: url(images/quote.png) no-repeat center 20px; /* move background image 20px from the top*/
+    background-color: #efefef;
+    text-align: center;
+    color: #4e4e4e;
+    font-size: 20px;
+    line-height: 1.6em; 
+}
+
+footer{
+    background: #202020;
+    padding: 30px 0;
+    border-top: 10px solid #161616
+}
+
+footer h4{
+    margin: 0;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+footer ul{
+    float: left;
+    width: 25%;
+    list-style-type: none;
+}
+
+footer li{
+    color: #aaa;
+    width: 80%;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.6em;
+} 
+
+footer:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Set an icon for each twitter entry; move text right by 20px, set a background image and place it from the left 6px down from top*/
+footer li.tw{
+    padding-left: 20px;
+    background: url(images/tweet.png) no-repeat left 6px;
+}
+
+#copyright{
+    clear: both;
+    padding-top: 30px;
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+    border-top: 2px solid #333;
+    color: #999;
+    font-size: 14px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 960px){
+
+    #selling-points li{
+        width: 40%;
+        padding: 0 5%;
+        margin: 20px 0;
+    }
+
+    footer ul{
+        width: 50%;
+    }
+
+    /* Make the 3rd, 5th etc clear and line up on the left properly*/
+    footer ul:nth-child(odd){
+    clear: both;
+    }
+
+    #quote{
+    width: 90%;
+    padding: 40px 5%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+header nav{
+    float: none;
+}
+
+header nav li{
+    margin-left: 0;
+    width: 16.66%;
+    text-align: center;
+    font-size: 14px;
+}
+
+header h1.logo{
+    float: none;
+    margin: 0 auto 15px;
+}
+
+#latest-work li{
+    width: 60%;
+    margin: 30px 20% !important;
+    float: none;
+}
+
+#latest-work h2{
+    text-align: center;
+}
+
+}
+
+
+
+@media screen and (max-width: 480px){
+
+#selling-points li{
+    width: 80%;
+    padding: 0 10%;
+    margin: 20px 0;
+}
+
+#latest-work li{
+    width: 80%;
+    margin: 30px 10% !important;  /* Important required as theres a previous important that's overriding this one. Could start to get messy!*/
+}
+
+#quote{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer ul{
+    width: 100%;
+    float: none;
+    border-top: 2px solid #333;  /* Use of border to make a divider */
+}
+
+/* Prep the header nav for the burger nav */
+
+header nav li{
+    float: none;
+    width: 100%;
+    margin: 0;
+}
+
+header nav{
+    background: #555;
+}
+
+header .wrapper{
+    padding: 0;
+    width: 100%;
+
+}
+
+header{
+    padding-bottom: 0;
+}
+
+header nav li a{
+    display: block;  /* makes the a tag a block element that effectively makes a full width series of buttons*/
+    text-align: center;
+    padding: 10px;
+    color: #999;
+    border-top: 1px solid #4f4f4f
+}
+
+/* Burger nav is a background image set on an empty div element. */
+#burger-nav{
+    width: 100%;
+    height: 40px;
+    background: url(images/burger.png) no-repeat 98% center;
+    cursor: pointer; /* probably won't see this on mobile screens however*/
+}
+
+/* set the nav buttons to hidden by default. overflow prevents the buttons from flowing out underneath the image */
+header nav ul{
+    height: 0;  
+    overflow: hidden;
+}
+
+/* this class gets added by the JS to toggle the burger nav menu */
+header nav ul.open{
+    height: auto;
+}
+
+}
